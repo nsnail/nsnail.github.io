@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+        <link href="./favicon.ico" rel="icon" />
+        <title>NetAdmin</title>
+        <style>
+            #versionCheck {
+                display: none;
+                position: absolute;
+                z-index: 99;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 40px;
+                background: rgba(255, 255, 255, 0.9);
+                color: #333;
+            }
+
+            .app-loading {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: white;
+            }
+
+            .app-loading__logo {
+                margin-bottom: 30px;
+            }
+
+            .app-loading__logo img {
+                width: 90px;
+                vertical-align: bottom;
+            }
+
+            .app-loading__loader {
+                box-sizing: border-box;
+                width: 35px;
+                height: 35px;
+                border: 5px solid transparent;
+                border-top-color: black;
+                border-radius: 50%;
+                animation: 0.5s loader linear infinite;
+                position: relative;
+            }
+
+            .app-loading__loader:before {
+                box-sizing: border-box;
+                content: '';
+                display: block;
+                width: inherit;
+                height: inherit;
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                border: 5px solid #ccc;
+                border-radius: 50%;
+                opacity: 0.5;
+            }
+
+            .app-loading__title {
+                font-family: 'Microsoft YaHei', sans-serif;
+                font-size: 24px;
+                color: #333;
+                margin-top: 30px;
+            }
+
+            .dark .app-loading {
+                background: #222225;
+            }
+
+            .dark .app-loading__loader {
+                border-top-color: white;
+            }
+
+            .dark .app-loading__title {
+                color: #c0c0c0;
+            }
+
+            @keyframes loader {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+      <script type="module" crossorigin src="./js/index-C3Re8InM.js"></script>
+      <link rel="modulepreload" crossorigin href="./js/@vue-_BCsYqm-.js">
+      <link rel="modulepreload" crossorigin href="./js/lodash-es-DCh--ulG.js">
+      <link rel="modulepreload" crossorigin href="./js/@vueuse-DKZ1O7gq.js">
+      <link rel="modulepreload" crossorigin href="./js/@element-plus-DpD46RjY.js">
+      <link rel="modulepreload" crossorigin href="./js/@sxzz-CpAfbxx4.js">
+      <link rel="modulepreload" crossorigin href="./js/@ctrl-D2oWfImC.js">
+      <link rel="modulepreload" crossorigin href="./js/dayjs-Cud5yAXI.js">
+      <link rel="modulepreload" crossorigin href="./js/async-validator-BTKOuuO-.js">
+      <link rel="modulepreload" crossorigin href="./js/memoize-one-Ds0C_khL.js">
+      <link rel="modulepreload" crossorigin href="./js/normalize-wheel-es-Vn5vHDCm.js">
+      <link rel="modulepreload" crossorigin href="./js/@floating-ui-DT7V1Oc1.js">
+      <link rel="modulepreload" crossorigin href="./js/element-plus-CoQd9HEf.js">
+      <link rel="modulepreload" crossorigin href="./js/crypto-js-BfYQ37JU.js">
+      <link rel="modulepreload" crossorigin href="./js/axios-DMXdiZgf.js">
+      <link rel="modulepreload" crossorigin href="./js/vue-router-CJBOlWwF.js">
+      <link rel="modulepreload" crossorigin href="./js/nprogress-BX4rmQ7W.js">
+      <link rel="modulepreload" crossorigin href="./js/vuex-CNGLPxA3.js">
+      <link rel="modulepreload" crossorigin href="./js/bignumber.js-iDjSUVmj.js">
+      <link rel="modulepreload" crossorigin href="./js/json-bigint-D0bu8vFr.js">
+      <link rel="modulepreload" crossorigin href="./js/@intlify-CZIS8eQd.js">
+      <link rel="modulepreload" crossorigin href="./js/vue-i18n-DbMEmpqT.js">
+      <link rel="modulepreload" crossorigin href="./js/vue3-json-viewer-B-aZDOpp.js">
+      <link rel="modulepreload" crossorigin href="./js/ace-builds-D9YH2WY7.js">
+      <link rel="modulepreload" crossorigin href="./js/resize-observer-polyfill-CzGuHLZU.js">
+      <link rel="modulepreload" crossorigin href="./js/vue3-ace-editor-ubj-WOyx.js">
+      <link rel="modulepreload" crossorigin href="./js/sortablejs-BALiOaUQ.js">
+      <link rel="modulepreload" crossorigin href="./js/vkbeautify-DEVEMlla.js">
+      <link rel="stylesheet" crossorigin href="./css/element-plus-B3lJtvYm.css">
+      <link rel="stylesheet" crossorigin href="./css/nprogress-BgDCIyLK.css">
+      <link rel="stylesheet" crossorigin href="./css/vue3-json-viewer-ByH33Jf7.css">
+      <link rel="stylesheet" crossorigin href="./css/index-CllpfDYF.css">
+    </head>
+    <body>
+        <noscript>
+            <strong>We're sorry but NetAdmin doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div class="aminui" id="app">
+            <div class="app-loading">
+                <div class="app-loading__logo">
+                    <img alt="" src="data:image/svg+xml,%3csvg%20class='icon'%20viewBox='0%200%201024%201024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20width='256'%20height='256'%3e%3cpath%20d='M512%200a512%20512%200%201%201%200%201024A512%20512%200%200%201%20512%200z%20m295.488%20296.512a365.696%20365.696%200%201%200-0.512%20431.68l-155.712-97.664-8.704%209.6a182.848%20182.848%200%201%201%2016.64-236.416l157.376-94.08z%20m0.192%20104h-26.624l-4.288%2038.464h-32.64l-3.2%2044.992h30.784l-6.272%2056.32h-30.912l-3.2%2045.056h29.056l-4.608%2041.28h26.496l4.672-41.28h30.72l-4.608%2041.28h26.432l4.672-41.28h20.736l3.2-44.992h-18.88l6.272-56.32h19.008l3.2-45.056h-17.088l4.288-38.464h-26.624l-4.224%2038.464h-30.72l4.352-38.464z%20m21.312%2083.456l-6.4%2056.32h-30.72l6.4-56.32h30.72z'%20fill='%2321A675'%20/%3e%3c/svg%3e" />
+                </div>
+                <div class="app-loading__loader"></div>
+                <div class="app-loading__title">NetAdmin</div>
+            </div>
+        </div>
+        <!-- built files will be auto injected -->
+        <div id="versionCheck">
+            <h2 style="line-height: 1; margin: 0; font-size: 24px">当前使用的浏览器内核版本过低 :(</h2>
+            <p style="line-height: 1; font-size: 14px; margin: 20px 0 0; opacity: 0.8">
+                当前版本：<span id="versionCheck-type">--</span> <span id="versionCheck-version">--</span>
+            </p>
+            <p style="line-height: 1; font-size: 14px; margin: 10px 0 0; opacity: 0.8">
+                最低版本要求：Chrome 71+、Firefox 65+、Safari 12+、Edge 97+。
+            </p>
+            <p style="line-height: 1; font-size: 14px; margin: 10px 0 0; opacity: 0.8">
+                请升级浏览器版本，或更换现代浏览器，如果你使用的是双核浏览器,请切换到极速/高速模式。
+            </p>
+        </div>
+
+        <script type="text/javascript">
+            // 黑夜模式
+            if (window.localStorage.getItem('APP_SET_DARK')) {
+                document.documentElement.classList.add('dark')
+            }
+
+            function getBrowserInfo() {
+                const userAgent = window.navigator.userAgent
+                const browserInfo = {
+                    type: 'unknown',
+                    version: 'unknown',
+                    userAgent: userAgent,
+                }
+                if (document.documentMode) {
+                    browserInfo.type = 'IE'
+                    browserInfo.version = document.documentMode + ''
+                } else if (indexOf(userAgent, 'Firefox')) {
+                    browserInfo.type = 'Firefox'
+                    browserInfo.version = userAgent.match(/Firefox\/([\d.]+)/)[1]
+                } else if (indexOf(userAgent, 'Opera')) {
+                    browserInfo.type = 'Opera'
+                    browserInfo.version = userAgent.match(/Opera\/([\d.]+)/)[1]
+                } else if (indexOf(userAgent, 'Edg')) {
+                    browserInfo.type = 'Edg'
+                    browserInfo.version = userAgent.match(/Edg\/([\d.]+)/)[1]
+                } else if (indexOf(userAgent, 'Chrome')) {
+                    browserInfo.type = 'Chrome'
+                    browserInfo.version = userAgent.match(/Chrome\/([\d.]+)/)[1]
+                } else if (indexOf(userAgent, 'Safari')) {
+                    browserInfo.type = 'Safari'
+                    browserInfo.version = userAgent.match(/Safari\/([\d.]+)/)[1]
+                }
+                return browserInfo
+            }
+
+            function indexOf(userAgent, browser) {
+                return userAgent.indexOf(browser) > -1
+            }
+
+            function isSatisfyBrowser() {
+                const minVer = {
+                    Chrome: 71,
+                    Firefox: 65,
+                    Safari: 12,
+                    Edg: 97,
+                    IE: 999,
+                }
+                const browserInfo = getBrowserInfo()
+                const materVer = browserInfo.version.split('.')[0]
+                return materVer >= minVer[browserInfo.type]
+            }
+
+            if (!isSatisfyBrowser()) {
+                document.getElementById('versionCheck').style.display = 'block'
+                document.getElementById('versionCheck-type').innerHTML = getBrowserInfo().type
+                document.getElementById('versionCheck-version').innerHTML = getBrowserInfo().version
+            }
+        </script>
+    </body>
+</html>
